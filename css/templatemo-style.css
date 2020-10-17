@@ -203,10 +203,6 @@ body {
   overflow-x: hidden;
 }
 
-.container {
-  background-color: white;
-}
-
 p, address {
   color: #626364;
   line-height: 1.8;
@@ -275,7 +271,7 @@ p, address {
 }
 
 .tm-site-title {
-  font-size: 2.2rem;
+  font-size: 2.6em;
   font-weight: 400;
   margin-bottom: 5px;
 }
@@ -416,6 +412,7 @@ p, address {
 }
 
 .tm-paging-links {
+  font-size: 30px;
   text-align: center;
   margin-bottom: 40px;
 }
@@ -433,7 +430,7 @@ p, address {
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  color: #2F956D;
+  color: black;
   background-color: transparent;
 }
 
@@ -602,6 +599,25 @@ p, address {
   .tm-history-inner {
     flex-direction: row;
   }
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .tm-history-title {
@@ -782,8 +798,6 @@ address {
   padding-top: 40px;
 }
 
-/* https://www.w3schools.com/howto/howto_js_accordion.asp */
-/* Style the buttons that are used to open and close the accordion panel */
 .accordion {
   font-size: 1.2rem;
   font-family: 'Open Sans', Helevetica, Arial, sans-serif;
@@ -856,3 +870,81 @@ address {
 .panel p {
   padding: 5px 20px 30px;
 }
+
+
+
+
+
+
+
+
+.container-1 {
+	margin: 0 auto;
+	max-width: 700px;
+	max-height: 100vh;
+	background-color: white;
+}
+
+
+/* Useful Classes */
+.xy-center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.transition {
+	transition: all 350ms ease-in-out;
+}
+
+.r-3-2 {
+	width: 100%;
+	padding-bottom: 66.667%;
+	background-color: #ddd;
+}
+
+.image-holder {
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+/* Main Styles */
+.gallery-wrapper {
+	position: relative;
+	overflow: hidden;
+}
+
+.gallery {
+	position: relative;
+	white-space: nowrap;
+	font-size: 0;
+}
+
+.item-wrapper {
+	cursor: pointer;
+	width: 23%; /* arbitrary value */
+	display: inline-block;
+	background-color: white;
+}
+
+.gallery-item { opacity: 0.5; }
+.gallery-item.active { opacity: 1; }
+
+.controls {
+	font-size: 0;
+	border-top: none;
+}
+.move-btn {
+	display: inline-block;
+	width: 50%;
+	border: none;
+  color: #ccc;
+	background-color: transparent;
+	padding: 0.2em 1.5em;
+}
+.move-btn:first-child {border-right: none;}
+.move-btn.left  { cursor: w-resize; }
+.move-btn.right { cursor: e-resize; }
+
